@@ -13,9 +13,23 @@ $(function () {
       $(".copy-btn").css({ transform: "scale(1)" });
     }, 100);
 
-    $(".copied").css({ transform: "scale(2)", opacity: "0.4" });
+    $(".copied1").css({ transform: "scale(.2)", opacity: ".05" });
     setTimeout(function () {
-      $(".copied").css({ transform: "scale(1)", opacity: "0" });
+      $(".copied1").css({ transform: "scale(.6)", opacity: ".08" });
+      setTimeout(function () {
+        $(".copyBox").append(`<span class="copied2">COPIED!</span>`);
+        $(".copied1").css({ transform: "scale(1.2)", opacity: ".11" });
+        setTimeout(function () {
+          $(".copied1").css({ transform: "scale(1.6)", opacity: ".14" });
+          setTimeout(function () {
+            $(".copied1").css({ transform: "scale(2.2)", opacity: ".17" });
+            setTimeout(function () {
+              $(".copied1").css({ transform: "scale(1)", opacity: "0" });
+              $(".copied2").remove();
+            }, 100);
+          }, 100);
+        }, 100);
+      }, 100);
     }, 100);
   });
 });
