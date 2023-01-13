@@ -69,14 +69,23 @@ button {
   font-weight: 600;
 }
 
+.copy-btn {
+  transition: scale 0.5s;
+  transform: scale(0.9);
+}
+
 .copy-btn i {
   margin-right: 1rem;
 }
 
-#clipboard button:hover {
+.copy-btn.animate {
+  transform: scale(1);
+}
+
+/* #clipboard button:hover {
   background-color: brown;
   box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.5);
-}
+} */
 
 #clipboard .copied {
   padding: 0.5rem;
